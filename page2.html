@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgive Me?</title>
+    <style>
+        body {
+            font-family: 'Dancing Script', cursive;
+            background: linear-gradient(to bottom, #ff69b4, #ffb6c1, #ffffff);
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        button {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5em;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .yes {
+            background: linear-gradient(to right, #32cd32, #00ff00);
+            color: white;
+        }
+        .yes:hover {
+            transform: scale(1.1);
+        }
+        .no {
+            background: linear-gradient(to right, #ff4500, #ff6347);
+            color: white;
+            position: relative;
+        }
+        .no:hover {
+            transform: scale(1.05);
+        }
+        .hearts {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Are you still angry? Forgive me? 💔</h1>
+    <div class="buttons">
+        <a href="final.html"><button class="yes">Yes, I forgive you! ❤️</button></a>
+        <a href="page3.html"><button class="no" id="no-btn">No</button></a>
+    </div>
+    <div class="hearts">💖💕💗💓💞</div>
+    <script>
+        const noBtn = document.getElementById('no-btn');
+        noBtn.addEventListener('mouseenter', () => {
+            const randomTop = Math.random() * 30 + 50; // 50% to 80%
+            const randomLeft = Math.random() * 30 + 50;
+            noBtn.style.position = 'absolute';
+            noBtn.style.top = randomTop + '%';
+            noBtn.style.left = randomLeft + '%';
+        });
+    </script>
+</body>
+</html>
